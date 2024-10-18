@@ -20,9 +20,10 @@ public class StaticMethodOverloading {
     public static void main(String[] args) {
         StaticMethodOverloading staticMethodOverloading = new StaticMethodOverloading();
         staticMethodOverloading.sum();
-        staticMethodOverloading.sum(154,587);
+        System.out.println( staticMethodOverloading.sum(154,587));
         staticMethodOverloading.sum(10.2,10.3);
         staticMethodOverloading.sum(15.2,13.5f);
+        staticMethodOverloading.register();
 
     }
     public void sum(){
@@ -35,6 +36,7 @@ public class StaticMethodOverloading {
         int c;
         c = a+b;
         return c;
+
     }
 
     public double sum(int a, double b){
@@ -46,6 +48,7 @@ public class StaticMethodOverloading {
     public double sum(double a, double b){
         double c;
         c = a+b;
+        System.out.println(c);
         return c;
     }
 
@@ -64,6 +67,7 @@ public class StaticMethodOverloading {
     public double sum(double a, float b){
         double c;
         c = a+b;
+        System.out.println(c);
         return c;
     }
 
