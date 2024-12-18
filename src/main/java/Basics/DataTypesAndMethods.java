@@ -33,6 +33,7 @@ public class DataTypesAndMethods {
         System.out.println(dataTypesAndMethods.b2);
         System.out.println(dataTypesAndMethods.f1);
 
+
     }
 
 
