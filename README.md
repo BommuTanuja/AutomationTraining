@@ -4,4 +4,8 @@ Oops concepts:Inheritance|Method overloading |Method overriding| Abstraction |In
 Keyowrds,contsructors,strings,Exceptions
 collections
 
+Selenium concepts :
+Locators,verifiaction methods,navigation methods,Switching windows,Hnadling JavascriptAlerts,
+Handling dropdowns,Waits
+
 Test Automation Framework :TestNG 
