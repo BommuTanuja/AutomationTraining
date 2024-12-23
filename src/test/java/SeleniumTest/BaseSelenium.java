@@ -13,7 +13,7 @@ public class BaseSelenium {
 
     @BeforeSuite
     public void launchBrowser(){
-        driver  = new ChromeDriver();
+        driver  = new FirefoxDriver();
     }
 
     @AfterSuite
