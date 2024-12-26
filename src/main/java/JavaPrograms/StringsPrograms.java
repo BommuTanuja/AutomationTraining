@@ -2,7 +2,7 @@ package JavaPrograms;
 
 public class StringsPrograms {
     public static void main(String[] args) {
-       // getSpecificStringFromGivenString();
+        getSpecificStringFromGivenString();
         reverseAString();
        // reverseAString("Automation");
         //getDuplicateCharactersFromString();
@@ -15,11 +15,12 @@ public class StringsPrograms {
         String s = "Your payment is completed and cashback $10 will be credited back to your account";
 
         int indexOfDollar = s.indexOf('$');
-        System.out.println("indexOfDollar :: " + indexOfDollar);
+        System.out.println("indexOfDollar :: " + indexOfDollar); // 39
+        // s.substring(s.indexOf("$"));
 
         String stringFromDollar = s.substring(indexOfDollar);
         System.out.println(stringFromDollar);
-       // s.substring(s.indexOf("$"));
+
 
         int indexOfSecondString = stringFromDollar.indexOf("will");
         System.out.println("indexOfSecondString :: " + indexOfSecondString);

@@ -41,10 +41,10 @@ public class HandleJavaScriptAlerts extends BaseSelenium{
         jsPromptButton.click();
 
         Alert alert = driver.switchTo().alert();
-        alert.sendKeys("Text");
+        alert.sendKeys("Admin");
         alert.accept();
         WebElement result = driver.findElement(By.xpath("//h4[contains(text(),'Result')]/following-sibling::p"));
-        Assert.assertTrue(result.getText().contains("Text"));
+        Assert.assertTrue(result.getText().contains("Admin"));
         System.out.println(result.getText());
 
     }

@@ -24,7 +24,7 @@ public class HandleMouseActions extends BaseSelenium{
     }
 
     @Test
-    public void verifyDynamicDropDownIsHandled() throws InterruptedException{
+    public void verifyDynamicDropDownIsHandled(){
         driver.get("https://thesoftwarepractice.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));

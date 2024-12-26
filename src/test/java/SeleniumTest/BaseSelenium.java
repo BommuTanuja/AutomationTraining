@@ -8,12 +8,16 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
+import java.time.Duration;
+
 public class BaseSelenium {
     public WebDriver driver;
 
     @BeforeSuite
     public void launchBrowser(){
         driver  = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     @AfterSuite
