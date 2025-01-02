@@ -10,6 +10,11 @@ public class HelloWorld {
      * void - returns nothing
      * main - Engine
      * @param args
+     *
+     * why static in main method ?
+     * main() method is the first method that executes first while execution.
+     * There will be no object for the class at first part of java runtime.
+     * So by making method as static JVM can load the class into the main memory and call the main() method.
      */
     // Static variables/Blocks will be loaded before object creation
     //static block will execute first

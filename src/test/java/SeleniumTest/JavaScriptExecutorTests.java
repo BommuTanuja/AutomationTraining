@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 
 public class JavaScriptExecutorTests extends BaseSelenium{
 
-
+    JavascriptExecutor jse;
     @BeforeClass
     public void initialize(){
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
+         jse = (JavascriptExecutor) driver;
     }
 
     @Test
@@ -55,6 +55,40 @@ public class JavaScriptExecutorTests extends BaseSelenium{
         clickHereLink.click();
         Assert.assertEquals(driver.findElement(By.cssSelector(".example>h3")).getText(), "New Window");
     }
+
+    @Test
+    public void scrollToElement(){
+        driver.get("https://the-internet.herokuapp.com/");
+        WebElement abtestLink = driver.findElement(By.xpath("//a[@href='/abtest']"));
+        WebElement forgetPwdLink = driver.findElement(By.xpath("//a[@href='/forgot_password']"));
+
+        // based on the pixel
+        jse.executeScript("window.scrollBy(0,200)");
+
+        // Bottom of the page
+        jse.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+        //scroll to the element
+        jse.executeScript("arguments[0].scrollIntoView(true)",abtestLink);
+
+    }
+
+    @Test
+    public void typeValueUsingJSId(){
+        driver.get("https://www.saucedemo.com/");
+        jse.executeScript("document.getElementById(\"user-name\").value='standard_user'");
+        jse.executeScript("document.getElementById(\"password\").value='secret_sauce'");
+        jse.executeScript("document.getElementById('login-button').click()");
+    }
+
+    @Test
+    public void typeUsingQuerySelector(){
+        driver.get("https://www.saucedemo.com/");
+        jse.executeScript("return document.querySelector('[name=\"user-name\"]').value='standard_user'");
+        jse.executeScript(" document.querySelector('name=\"password\"]').value='secret_sauce'");
+
+    }
+
 
 
 }

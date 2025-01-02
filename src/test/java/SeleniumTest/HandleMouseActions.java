@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -40,6 +41,17 @@ public class HandleMouseActions extends BaseSelenium{
         wait.until(ExpectedConditions.textToBe(By.cssSelector(".title"), "TRANSPORTATION"));
         Assert.assertEquals(driver.getTitle(), "TSP : Industries - Transportation");
         System.out.println(driver.getTitle());
+    }
+
+    @Test
+    public void verifyDragAndDrop(){
+        driver.get("https://the-internet.herokuapp.com/drag_and_drop");
+
+        WebElement firstBox = driver.findElement(By.xpath("//div[@id='column-a']"));
+        WebElement secondBox = driver.findElement(By.xpath("//div[@id='column-b']"));
+
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(firstBox,secondBox).build().perform();
     }
 
 }

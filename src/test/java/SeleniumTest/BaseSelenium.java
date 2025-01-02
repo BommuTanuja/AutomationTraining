@@ -15,15 +15,15 @@ public class BaseSelenium {
 
     @BeforeSuite
     public void launchBrowser(){
-        driver  = new FirefoxDriver();
+        driver  = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     @AfterSuite
     public void killSession(){
-        //driver.close();
-        driver.quit();
+        // driver.close();
+        // driver.quit();
     }
 
     @BeforeTest
