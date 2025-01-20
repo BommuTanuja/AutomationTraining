@@ -1,10 +1,7 @@
 package SeleniumTest;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.awt.desktop.SystemEventListener;
+
 import java.time.Duration;
 
 public class HandleMouseActions extends BaseSelenium{
@@ -52,6 +49,7 @@ public class HandleMouseActions extends BaseSelenium{
 
         Actions actions = new Actions(driver);
         actions.dragAndDrop(firstBox,secondBox).build().perform();
+
     }
 
 }

@@ -6,9 +6,10 @@ public class StringsPrograms {
         reverseAString();
        // reverseAString("Automation");
         //getDuplicateCharactersFromString();
-       // getMaxValue();
+        getMaxValue();
        // getVowelsFromString();
         palindromeNumber();
+        repeatedCharactersCount();
     }
 
     public static void getSpecificStringFromGivenString(){
@@ -97,6 +98,24 @@ public class StringsPrograms {
      }else {
          System.out.println("not palindrome");
      }
+    }
+
+
+
+    public static void repeatedCharactersCount(){
+        String s1 ="tanuja";
+
+        char[] ch =s1.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            int count=0;
+            for(int j=i+1;j<ch.length;j++){
+                if(ch[i]==ch[j]){
+                    count++;
+                }
+
+            }
+            System.out.println(ch[i]+" "+ count);
+        }
     }
 
 

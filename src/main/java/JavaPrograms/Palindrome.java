@@ -17,5 +17,19 @@ public class Palindrome {
         else {
             System.out.println("not palindrome");
         }
+
+        reverseNumber();
+    }
+
+
+    public static void reverseNumber(){
+        int num = 2568;
+        int r,reverse=0;
+        while(num>0){
+            r = num%10;
+            reverse = (reverse*10)+r;
+            num =num/10;
+        }
+        System.out.println(reverse);
     }
 }
